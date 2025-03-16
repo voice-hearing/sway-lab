@@ -43,7 +43,7 @@ modules:
         - fortune-mod
         - zeitfetch
         - python3-i3ipc
-        - rigrep
+        - riprep
         - thefuck
         - zoxide
         - zsh
@@ -53,8 +53,6 @@ modules:
         - bemenu
 
       # brave-browser
-        - brave-browser
-        - twingate-latest
 
       # environment
         - tuned-ppd
