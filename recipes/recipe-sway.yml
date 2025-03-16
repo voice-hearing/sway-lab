@@ -6,7 +6,7 @@ description: ublue images for wayland compositors
 
 # the base image to build on top of (FROM) and the version tag to use
 
-base-image: quay.io/fedora-ostree-desktops/sway-atomic
+base-image: quay.io/fedora-ostree-desktops/sway-atomic:41
 
 image-version: 41
 
