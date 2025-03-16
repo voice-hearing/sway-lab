@@ -14,6 +14,8 @@ image-version: 41
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
+  - type: rpm-ostree
+  # rest of the module config...
   - from-file: common/sddm-modules.yml
   - from-file: common/common-modules.yml
   - from-file: common/sway-modules.yml
