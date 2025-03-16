@@ -32,11 +32,26 @@ modules:
 
     - type: rpm-ostree
       install:
+      # Cli
+        - bat
+        - exa
+        - fd-find
+        - fzf
+        - neovim
+        - rust
+        - cargo
+        - fortune-mod
+        - zeitfetch
+        - python3-i3ipc
+        - rigrep
+        - thefuck
+        - zoxide
+        - zsh
       # launcher
         - rofi-wayland
+        - bemenu
 
       # environment
-        - fzf
         - tuned-ppd
         - xorg-x11-server-Xwayland
         - headsetcontrol
@@ -63,6 +78,7 @@ modules:
         - alsa-firmware
         - p7zip
         - distrobox
+        - gparted
         
       # sound
         - wireplumber
@@ -85,6 +101,7 @@ modules:
         - thunar
         - thunar-archive-plugin 
         - thunar-volman
+        - gnome-epub-thumbnailer
         - xarchiver
         - imv
         - p7zip
