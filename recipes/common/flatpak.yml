@@ -1,0 +1,67 @@
+modules:
+  - type: systemd
+
+    system:
+      enabled:
+        - flatpak-system-update.timer
+
+    user:
+      enabled:
+        - flatpak-user-update.timer
+
+  - type: default-flatpaks
+    notify: true # Send notification after install/uninstall is finished (true/false)
+    system:
+      install:
+        - com.github.tchx84.Flatseal
+        - it.mijorus.gearlever
+        - org.mozilla.Thunderbird
+        - io.github.dvlv.boxbuddyrs
+        - org.gnome.Boxes
+        - io.github.flattool.Warehouse
+        - org.fedoraproject.MediaWriter
+        - com.calibre_ebook.calibre
+        - com.visualstudio.code
+        - com.visualstudio.code-oss
+        - com.vscodium.codium
+        - io.gitlab.librewolf-community
+        - com.ulaa.Ulaa
+        - io.github.mhogomchungu.sirikali
+        - io.github.picocrypt.Picocrypt
+        - io.github.cmus.cmus
+        - com.github.Murmele.Gittyup
+        - com.neatdecisions.Detwinner
+        - com.zettlr.Zettlr
+        - io.github.sxyazi.yazi
+        - eu.betterbird.Betterbird
+        - org.gnome.DejaDup
+        - com.uploadedlobster.peek
+        - org.qutebrowser.qutebrowser
+        - org.onlyoffice.desktopeditors
+        - com.opera.Opera
+        - io.mpv.Mpv
+        - md.obsidian.Obsidian
+        - no.mifi.losslesscut
+        - org.freefilesync.FreeFileSync
+        - org.jdownloader.JDownloader
+        - io.kapsa.drive
+        - com.spotify.Client
+        - org.kde.kdenlive
+        - net.mullvad.MullvadBrowser
+        - org.videolan.VLC
+        - com.microsoft.Edge
+        - org.standardnotes.standardnotes
+        - com.notesnook.Notesnook
+        - us.zoom.Zoom
+        - org.gustavoperedo.FontDownloader
+        - org.gnome.meld
+        - re.sonny.Junction
+        - org.audacityteam.Audacity
+        - org.gimp.GIMP
+        - org.inkscape.Inkscape
+        - com.dec05eba.gpu_screen_recorder
+        - org.kde.kdenlive
+        - com.belmoussaoui.Obfuscate
+        - com.discordapp.Discord
+        - org.telegram.desktop
+    user: {}
