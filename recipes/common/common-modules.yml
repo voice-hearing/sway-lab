@@ -43,7 +43,7 @@ modules:
         - fortune-mod
         - zeitfetch
         - python3-i3ipc
-        - riprep
+        - ripgrep
         - thefuck
         - zoxide
         - zsh
