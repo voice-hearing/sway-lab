@@ -8,6 +8,7 @@ modules:
     - type: script
       scripts:
         - installsignedkernel.sh
+        - regenerateinitramfs.sh
 
     - type: containerfile
       snippets:
@@ -23,13 +24,11 @@ modules:
         - RUN rpm -ivh /ublue-os-luks.noarch.rpm
         - RUN rpm -ivh /ublue-os-just.noarch.rpm
 
-
     - type: script
       scripts:
         - installandroidudev.sh
         - ensureautoupdates.sh
         - fixupstreamicdloaderbug.sh
-        - addbrewjustimport.sh
 
     - type: rpm-ostree
       install:
@@ -48,9 +47,14 @@ modules:
         - thefuck
         - zoxide
         - zsh
+        
       # launcher
         - rofi-wayland
         - bemenu
+
+      # brave-browser
+        - brave-browser
+        - twingate-latest
 
       # environment
         - tuned-ppd
@@ -168,6 +172,8 @@ modules:
       scripts:
         - installrpmfusion.sh
         - removeunusedrepos.sh
+        - setsddmtheming.sh
+        - setthunaricon.sh
 
     - type: files
       files:
