@@ -29,6 +29,7 @@ modules:
         - installandroidudev.sh
         - ensureautoupdates.sh
         - fixupstreamicdloaderbug.sh
+        - addbrewjustimport.sh
 
     - type: rpm-ostree
       install:
