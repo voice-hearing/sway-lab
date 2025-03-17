@@ -20,7 +20,6 @@ modules:
   - from-file: common/common-modules.yml
   - from-file: common/sway-modules.yml
   - from-file: common/flatpak.yml
-  - from-file: common/libvirt-modules.yml
   - from-file: common/fonts.yml
   - from-file: common/final-modules.yml
 
