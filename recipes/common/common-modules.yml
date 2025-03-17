@@ -56,8 +56,6 @@ modules:
         - j4-dmenu-desktop
         - bemenu
 
-      # brave-browser
-
       # environment
         - tuned-ppd
         - xorg-x11-server-Xwayland
@@ -182,7 +180,6 @@ modules:
     - type: script
       scripts:
         - installrpmfusion.sh
-        - installbravebrowser.sh
         - removeunusedrepos.sh
 
     - type: files
