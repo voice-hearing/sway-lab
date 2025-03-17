@@ -149,7 +149,6 @@ modules:
         - breeze-icon-theme 
         - papirus-icon-theme
         - lxappearance
-        - xfce4-appearance-settings
 
     - type: script
       scripts:
