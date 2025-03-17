@@ -54,6 +54,7 @@ modules:
         
       # launcher
         - rofi-wayland
+        - j4-dmenu-desktop
         - bemenu
 
       # brave-browser
