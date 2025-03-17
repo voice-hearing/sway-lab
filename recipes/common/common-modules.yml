@@ -199,6 +199,3 @@ modules:
       scripts:
         - settheming.sh
         - addbrewjustimport.sh
-
-    - type: sway-lab-signing
-      source: local
