@@ -182,6 +182,7 @@ modules:
     - type: script
       scripts:
         - installrpmfusion.sh
+        - installbravebrowser.sh
         - removeunusedrepos.sh
 
     - type: files
