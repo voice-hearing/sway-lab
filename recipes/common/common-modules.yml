@@ -151,6 +151,7 @@ modules:
     - type: script
       scripts:
         - installproprietarypackages.sh
+        - installbravebrowser.sh
 
     - type: rpm-ostree
       install:
