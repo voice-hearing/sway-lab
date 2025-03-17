@@ -8,8 +8,7 @@ modules:
     - type: script
       scripts:
         - installsignedkernel.sh
-        - regenerateinitramfs.sh
-
+        
     - type: containerfile
       snippets:
         - RUN rpm-ostree install just powerstat
@@ -184,8 +183,6 @@ modules:
       scripts:
         - installrpmfusion.sh
         - removeunusedrepos.sh
-        - setsddmtheming.sh
-        - setthunaricon.sh
 
     - type: files
       files:
