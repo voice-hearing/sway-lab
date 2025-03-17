@@ -40,6 +40,7 @@ modules:
         - neovim
         - rust
         - cargo
+        - hugo
         - fortune-mod
         - zeitfetch
         - python3-i3ipc
@@ -47,6 +48,9 @@ modules:
         - thefuck
         - zoxide
         - zsh
+        - pandoc
+        - poppler-devel
+        - poppler-utils
         
       # launcher
         - rofi-wayland
@@ -115,6 +119,13 @@ modules:
         - gvfs-fuse
         - gvfs-archive
         - android-tools
+        - zathura 
+        - zathura-cb 
+        - zathura-djvu 
+        - zathura-pdf-mupdf 
+        - zathura-pdf-poppler 
+        - zathura-ps
+        - seahorse
 
       # screenshot
         - slurp
@@ -125,6 +136,7 @@ modules:
         - wlsunset
         - brightnessctl
         - kanshi
+        - ImageMagick
 
       # notifications
         - dunst
@@ -136,6 +148,8 @@ modules:
         - paper-icon-theme
         - breeze-icon-theme 
         - papirus-icon-theme
+        - lxappearance
+        - xfce4-appearance-settings
 
     - type: script
       scripts:
