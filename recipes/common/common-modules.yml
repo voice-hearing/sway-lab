@@ -182,8 +182,6 @@ modules:
     - type: script
       scripts:
         - installrpmfusion.sh
-        - installbravebrowser.sh
-        - starship.sh
         - removeunusedrepos.sh
 
     - type: files
