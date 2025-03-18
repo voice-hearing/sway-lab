@@ -53,7 +53,7 @@ modules:
         - org.standardnotes.standardnotes
         - com.notesnook.Notesnook
         - us.zoom.Zoom
-        - org.gustavoperedo.FontDownloader
+        - io.github.shiftey.Desktop
         - org.gnome.meld
         - re.sonny.Junction
         - org.audacityteam.Audacity
