@@ -152,8 +152,7 @@ modules:
       scripts:
         - installproprietarypackages.sh
         - installbravebrowser.sh
-        - installtailscale.sh
-
+        
     - type: rpm-ostree
       install:
         - heif-pixbuf-loader
