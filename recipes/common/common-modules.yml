@@ -152,6 +152,8 @@ modules:
       scripts:
         - installproprietarypackages.sh
         - installbravebrowser.sh
+        - installtailscale.sh
+        - nordvpn.sh
 
     - type: rpm-ostree
       install:
