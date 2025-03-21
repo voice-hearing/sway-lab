@@ -22,7 +22,6 @@ modules:
         - org.fedoraproject.MediaWriter
         - com.calibre_ebook.calibre
         - com.visualstudio.code
-        - com.visualstudio.code-oss
         - com.vscodium.codium
         - io.gitlab.librewolf-community
         - com.ulaa.Ulaa
@@ -34,9 +33,7 @@ modules:
         - com.zettlr.Zettlr
         - io.github.sxyazi.yazi
         - eu.betterbird.Betterbird
-        - org.gnome.DejaDup
         - com.uploadedlobster.peek
-        - org.qutebrowser.qutebrowser
         - org.onlyoffice.desktopeditors
         - com.opera.Opera
         - io.mpv.Mpv
@@ -44,7 +41,6 @@ modules:
         - no.mifi.losslesscut
         - org.freefilesync.FreeFileSync
         - org.jdownloader.JDownloader
-        - io.kapsa.drive
         - com.spotify.Client
         - org.kde.kdenlive
         - net.mullvad.MullvadBrowser
@@ -61,6 +57,9 @@ modules:
         - org.inkscape.Inkscape
         - com.dec05eba.gpu_screen_recorder
         - org.kde.kdenlive
+        - com.brave.Browser
+        - dev.zed.Zed
+        - com.borgbase.Vorta
         - com.belmoussaoui.Obfuscate
         - com.discordapp.Discord
         - org.telegram.desktop
