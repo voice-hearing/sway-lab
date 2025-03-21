@@ -15,6 +15,7 @@ modules:
       install:
         - com.github.tchx84.Flatseal
         - it.mijorus.gearlever
+        - org.gnome.seahorse.Application
         - org.mozilla.Thunderbird
         - io.github.dvlv.boxbuddyrs
         - org.gnome.Boxes
