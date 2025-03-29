@@ -206,3 +206,7 @@ modules:
       scripts:
         - settheming.sh
         - addbrewjustimport.sh
+        
+    - type: script
+    scripts:
+      - starship.sh
