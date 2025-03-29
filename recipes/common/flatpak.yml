@@ -30,6 +30,7 @@ modules:
         - io.github.mhogomchungu.sirikali
         - io.github.picocrypt.Picocrypt
         - io.github.cmus.cmus
+        - io.gitlab.adhami3310.Converter
         - com.github.Murmele.Gittyup
         - io.github.shiftey.Desktop
         - com.neatdecisions.Detwinner
