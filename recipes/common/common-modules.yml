@@ -97,7 +97,6 @@ modules:
         - pipewire
         - pamixer
         - pulseaudio-utils
-        - cmus
 
       # networking
         - network-manager-applet
