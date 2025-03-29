@@ -1,4 +1,8 @@
 modules:
+  - type: script
+      scripts:
+        - nerdfonts.sh
+        
   - type: fonts
     fonts:
       nerd-fonts:
