@@ -21,17 +21,17 @@ modules:
         - org.mozilla.Thunderbird
         - io.github.dvlv.boxbuddyrs
         - org.gnome.Boxes
+        - io.neovim.nvim
         - io.github.flattool.Warehouse
         - org.fedoraproject.MediaWriter
         - com.calibre_ebook.calibre
-        - com.visualstudio.code
         - com.vscodium.codium
-        - io.gitlab.librewolf-community
-        - com.ulaa.Ulaa
+        - org.garudalinux.firedragon
         - io.github.mhogomchungu.sirikali
         - io.github.picocrypt.Picocrypt
         - io.github.cmus.cmus
         - com.github.Murmele.Gittyup
+        - io.github.shiftey.Desktop
         - com.neatdecisions.Detwinner
         - com.zettlr.Zettlr
         - io.github.sxyazi.yazi
@@ -44,7 +44,7 @@ modules:
         - no.mifi.losslesscut
         - org.freefilesync.FreeFileSync
         - org.jdownloader.JDownloader
-        - com.spotify.Client
+        - com.github.KRTirtho.Spotube
         - org.kde.kdenlive
         - net.mullvad.MullvadBrowser
         - org.videolan.VLC
