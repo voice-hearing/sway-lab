@@ -1,12 +1,21 @@
-# Setup flathub remote, remove fedora remote if present
- setup-flatpak-repos:
-    flatpak remote-add --if-not-exists --system flathub https://flathub.org/repo/flathub.flatpakrepo
-    flatpak uninstall --system --noninteractive `flatpak list --all --columns origin,application|grep ^fedora|awk '{print $2}'|xargs`
-    flatpak remote-delete --system fedora --force
+modules:
+  - type: systemd
 
-  # Install typical apps
-  install-apps:
-    flatpak install -y --system \\     
+    system:
+      enabled:
+        - flatpak-system-update.timer
+
+    user:
+      enabled:
+        - flatpak-user-update.timer
+
+  - type: default-flatpaks
+    notify: true # Send notification after install/uninstall is finished (true/false)
+    system:
+      repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
+      repo-name: flathub
+      repo-title: "Flathub (system-wide)"
+      install:    
         - com.github.tchx84.Flatseal
         - it.mijorus.gearlever
         - org.mozilla.Thunderbird
