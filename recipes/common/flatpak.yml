@@ -39,11 +39,13 @@ modules:
         - com.uploadedlobster.peek
         - org.onlyoffice.desktopeditors
         - com.opera.Opera
+        - info.smplayer.SMPlayer
         - io.mpv.Mpv
         - md.obsidian.Obsidian
         - no.mifi.losslesscut
         - org.freefilesync.FreeFileSync
         - org.jdownloader.JDownloader
+        - com.tonikelope.MegaBasterd
         - com.github.KRTirtho.Spotube
         - org.kde.kdenlive
         - net.mullvad.MullvadBrowser
