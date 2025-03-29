@@ -10,3 +10,4 @@ modules:
       google-fonts:
         - Roboto
         - Open Sans
+        - ubuntu-fonts
