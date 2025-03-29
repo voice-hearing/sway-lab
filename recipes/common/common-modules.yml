@@ -40,6 +40,8 @@ modules:
         - rust
         - cargo
         - hugo
+        - go
+        - gcc
         - fortune-mod
         - zeitfetch
         - python3-i3ipc
@@ -50,6 +52,8 @@ modules:
         - pandoc
         - poppler-devel
         - poppler-utils
+        - python3-pip
+        - python3
         
       # launcher
         - rofi-wayland
@@ -84,12 +88,16 @@ modules:
         - p7zip
         - distrobox
         - gparted
+        - rclone
+        - make
+        - nodejs
         
       # sound
         - wireplumber
         - pipewire
         - pamixer
         - pulseaudio-utils
+        - cmus
 
       # networking
         - network-manager-applet
@@ -132,6 +140,7 @@ modules:
       # display
         - wlr-randr
         - wlsunset
+        - gammastep
         - brightnessctl
         - kanshi
         - ImageMagick
