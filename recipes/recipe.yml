@@ -22,6 +22,25 @@ modules:
   - from-file: common/sway-modules.yml
   - from-file: common/flatpak.yml
   - from-file: common/fonts.yml
+  # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+
+# image will be published to ghcr.io/<user>/<name>
+name: ublue-gnome-sway
+# description will be included in the image's metadata
+description: This is my personal OS image following bluefin-dx latest.
+
+# the base image to build on top of (FROM) and the version tag to use
+base-image: ghcr.io/ublue-os/bluefin-dx
+image-version: latest
+
+modules:
+  # - from-file: common-modules.yml
+  - from-file: common/common-modules.yml
+  - from-file: common/sway-modules.yml
+  - from-file: common/flatpak.yml
+  - from-file: common/fonts.yml
+  - from-file: common/docker-modules.yml
+  - from-file: common/libvirt-modules.yml
   - from-file: common/final-modules.yml
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
