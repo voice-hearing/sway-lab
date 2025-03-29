@@ -1,22 +1,11 @@
-modules:
-  - type: systemd
-
-    system:
-      enabled:
-        - flatpak-system-update.timer
-
-    user:
-      enabled:
-        - flatpak-user-update.timer
-
- # Setup flathub remote, remove fedora remote if present
+# Setup flathub remote, remove fedora remote if present
  setup-flatpak-repos:
     flatpak remote-add --if-not-exists --system flathub https://flathub.org/repo/flathub.flatpakrepo
     flatpak uninstall --system --noninteractive `flatpak list --all --columns origin,application|grep ^fedora|awk '{print $2}'|xargs`
     flatpak remote-delete --system fedora --force
 
-  # Install typical GNOME apps
-  install-apps-productivity:
+  # Install typical apps
+  install-apps:
     flatpak install -y --system \\     
         - com.github.tchx84.Flatseal
         - it.mijorus.gearlever
