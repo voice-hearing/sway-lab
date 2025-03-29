@@ -208,5 +208,5 @@ modules:
         - addbrewjustimport.sh
         
     - type: script
-    scripts:
-      - starship.sh
+      scripts:
+        - starship.sh
