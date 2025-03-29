@@ -18,6 +18,7 @@ modules:
   # rest of the module config...
   - from-file: common/sddm-modules.yml
   - from-file: common/common-modules.yml
+  - from-file: common/docker-modules.yml
   - from-file: common/sway-modules.yml
   - from-file: common/flatpak.yml
   - from-file: common/fonts.yml
