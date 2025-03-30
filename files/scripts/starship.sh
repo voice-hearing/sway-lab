@@ -15,8 +15,3 @@ echo 'eval "$(starship init bash)"' >> /etc/bashrc
 
 # Bash Prexec
 curl -Lo /usr/share/bash-prexec https://raw.githubusercontent.com/rcaloras/bash-preexec/master/bash-preexec.sh
-
-# Consolidate Just Files
-find /tmp/just -iname '*.just' -exec printf "\n\n" \; -exec cat {} \; >> /usr/share/ublue-os/just/60-custom.just
-# ensure any just recipes needing fedora version are updated
-sed -i "s/FEDORA_MAJOR_VERSION/${FEDORA_MAJOR_VERSION}/" /usr/share/ublue-os/just/60-custom.just
