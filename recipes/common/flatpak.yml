@@ -67,6 +67,6 @@ modules:
         - dev.zed.Zed
         - com.borgbase.Vorta
         - com.belmoussaoui.Obfuscate
-        - com.discordapp.Discord
+        - io.github.milkshiift.GoofCord
         - org.telegram.desktop
     user: {}
