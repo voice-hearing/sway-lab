@@ -9,6 +9,7 @@ modules:
       scripts:
         - installsignedkernel.sh
         - nerdfonts.sh
+        - nordvpn.sh
         
     - type: containerfile
       snippets:
