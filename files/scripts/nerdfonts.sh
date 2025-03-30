@@ -6,4 +6,4 @@
 set -oue pipefail
 
 # Add Nerd Fonts
-curl -Lo /etc/yum.repos.d/_copr_che-nerd-fonts-"${FEDORA41}".repo https://copr.fedorainfracloud.org/coprs/che/nerd-fonts/repo/fedora-"${FEDORA41}"/che-nerd-fonts-fedora-"${FEDORA41}".repo
+curl -Lo /etc/yum.repos.d/_copr_che-nerd-fonts-"${fedora-$releasever-$basearch}".repo https://copr.fedorainfracloud.org/coprs/che/nerd-fonts/repo/fedora-"${fedora-$releasever-$basearch}"/che-nerd-fonts-fedora-"${fedora-$releasever-$basearch}".repo
