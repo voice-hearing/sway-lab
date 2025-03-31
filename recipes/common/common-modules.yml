@@ -185,9 +185,6 @@ modules:
         - libpostproc-free  
         - libswresample-free  
         - libswscale-free  
-        - firefox 
-        - firefox-langpacks
-
 
     - type: script
       scripts:
