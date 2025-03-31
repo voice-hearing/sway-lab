@@ -20,7 +20,7 @@ modules:
         - it.mijorus.gearlever
         - org.mozilla.Thunderbird
         - io.github.dvlv.boxbuddyrs
-        - org.gnome.Boxes
+        - app.zen_browser.zen
         - io.neovim.nvim
         - io.github.flattool.Warehouse
         - org.fedoraproject.MediaWriter
