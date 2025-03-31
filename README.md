@@ -6,8 +6,9 @@ This artful opinionated image is collection of parts for personal use.
 
 ![sway](https://github.com/voice-hearing/sway-lab/blob/main/2025-03-31T21%3A05%3A25%2C047822887%2B01%3A00.png)
 ## Abstract
-Learned how to insert into custom image
-* repository 
+Learned how to insert into custom image to make it more suitable for my use:
+* repository
+* install packages, flatpaks
 * rpm for instance nordvpn
 * images
 * modify waybar settings
