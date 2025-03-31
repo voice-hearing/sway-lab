@@ -7,7 +7,7 @@ set -ouex pipefail
 
 echo "Installing Waydroid"
 
-curl -Lo /etc/yum.repos.d/_copr_kylegospo-bazzite.repo https://copr.fedorainfracloud.org/coprs/kylegospo/bazzite/repo/fedora-"${FEDORA_MAJOR_VERSION}"/kylegospo-bazzite-fedora-"${FEDORA_MAJOR_VERSION}".repo
+curl -Lo /etc/yum.repos.d/_copr_kylegospo-bazzite.repo https://copr.fedorainfracloud.org/coprs/kylegospo/bazzite/repo/fedora-"${FEDORA_MAJOR_VERSION:=41}"/kylegospo-bazzite-fedora-"${FEDORA_MAJOR_VERSION:=41}".repo
 
 rpm-ostree install waydroid cage wlr-randr
 
