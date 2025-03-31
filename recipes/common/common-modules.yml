@@ -8,6 +8,7 @@ modules:
     - type: script
       scripts:
         - installsignedkernel.sh
+        - chezmoi.sh
         - nordvpn.sh
         
     - type: containerfile
