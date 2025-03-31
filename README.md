@@ -4,6 +4,8 @@ See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup i
 
 This artful opinionated image is collection of parts for personal use. 
 
+![sway]https://github.com/voice-hearing/sway-lab/blob/main/2025-03-31T21%3A05%3A25%2C047822887%2B01%3A00.png)
+
 ## Installation
 
 > [!WARNING]  
