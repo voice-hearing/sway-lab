@@ -8,7 +8,7 @@ modules:
     - type: script
       scripts:
         - installsignedkernel.sh
-        - nerd-fonts.sh
+        - waydroid.sh
         - nordvpn.sh
         
     - type: containerfile
