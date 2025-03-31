@@ -52,14 +52,14 @@ These images are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](ht
 cosign verify --key cosign.pub ghcr.io/voice-hearing/sway
 ```
 
-Once installed 
+## Once installed 
 
 ```bash
 echo 'input * {
     xkb_layout "gb"
 }' >> ~/.config/sway/config
 ```
-continue by 
+### Continue by 
 ```bash
 distrobox enter fedora
 ```
