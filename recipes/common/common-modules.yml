@@ -56,6 +56,7 @@ modules:
         - poppler-utils
         - python3-pip
         - python3
+        - rclone-browser
         
       # launcher
         - rofi-wayland
