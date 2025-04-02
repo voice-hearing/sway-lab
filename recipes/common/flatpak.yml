@@ -56,11 +56,14 @@ modules:
         - com.notesnook.Notesnook
         - us.zoom.Zoom
         - io.github.shiftey.Desktop
+        - io.kapsa.drive
         - org.gnome.meld
         - re.sonny.Junction
         - org.audacityteam.Audacity
         - org.gimp.GIMP
         - org.inkscape.Inkscape
+        - io.github.pieterdd.RcloneShuttle
+        - com.hunterwittenborn.Celeste
         - com.dec05eba.gpu_screen_recorder
         - org.kde.kdenlive
         - com.brave.Browser
