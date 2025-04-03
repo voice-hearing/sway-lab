@@ -10,6 +10,11 @@ modules:
         - installsignedkernel.sh
         - chezmoi.sh
         - nordvpn.sh
+        - vscode.sh
+        - pcloud.sh
+        - icedrive.sh
+        - filen.sh
+        - kopia.sh
         
     - type: containerfile
       snippets:
