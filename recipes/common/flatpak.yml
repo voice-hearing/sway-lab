@@ -49,6 +49,7 @@ modules:
         - no.mifi.losslesscut
         - org.freefilesync.FreeFileSync
         - org.jdownloader.JDownloader
+        - cn.feishu.Feishu
         - com.tonikelope.MegaBasterd
         - com.github.KRTirtho.Spotube
         - org.kde.kdenlive
