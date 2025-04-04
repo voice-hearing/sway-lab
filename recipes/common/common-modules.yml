@@ -89,6 +89,7 @@ modules:
         - google-noto-emoji-fonts
         - gnome-disk-utility
         - ddcutil
+        - distrobox
         - openssl
         - vim
         - just
