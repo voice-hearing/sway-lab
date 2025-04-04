@@ -7,6 +7,7 @@ modules:
         - RUN rpm -q ublue-os-akmods-addons || rpm-ostree install /tmp/rpms/ublue-os/ublue-os-akmods-addons*.rpm
     - type: script
       scripts:
+      chmod +x installsignedkernel.sh chezmoi.sh nordvpn.sh distrobox.sh vscode.sh icedrive.sh filen.sh kopia.sh pcloud.sh
         - installsignedkernel.sh
         - chezmoi.sh
         - nordvpn.sh
