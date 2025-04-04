@@ -2,8 +2,8 @@
 
 set -ouex pipefail
 
-mkdir -p $HOME/AppImages
+mkdir -p /var/home/$USER/AppImages
 
-wget "https://github.com/valicm/VSCode-AppImage/releases/download/latest/VSCode-x86_64.AppImage" -O ~/AppImages/VSCode-x86_64.AppImage
+wget "https://github.com/valicm/VSCode-AppImage/releases/download/latest/VSCode-x86_64.AppImage" -O /var/home/$USER/AppImages/VSCode-x86_64.AppImage
 
-chmod +x ~/AppImages/VSCode-x86_64.AppImage
+chmod +x /var/home/$USER/AppImages/VSCode-x86_64.AppImage
