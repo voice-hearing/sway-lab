@@ -217,4 +217,3 @@ modules:
     - type: script
       scripts:
         - starship.sh
-        - distrobox.sh
