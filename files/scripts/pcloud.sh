@@ -2,8 +2,8 @@
 
 set -ouex pipefail
 
-mkdir -p $HOME/AppImages
+mkdir -p /var/home/$USER/AppImages
 
-wget "https://github.com/voice-hearing/sway-lab/blob/main/files/system/pcloud/pcloud.AppImage" -O ~/pcloud.AppImage
+wget "https://github.com/voice-hearing/sway-lab/blob/main/files/system/pcloud/pcloud.AppImage" -O /var/home/$USER/AppImages/pcloud.AppImage
 
-chmod +x ~/pcloud.AppImage
+chmod +x /var/home/$USER/AppImages/pcloud.AppImage
