@@ -22,6 +22,8 @@ modules:
         - io.github.dvlv.boxbuddyrs
         - app.zen_browser.zen
         - io.neovim.nvim
+        - com.github.ahrm.sioyek
+        - com.inform7.IDE
         - io.github.flattool.Warehouse
         - org.fedoraproject.MediaWriter
         - com.calibre_ebook.calibre
