@@ -10,6 +10,7 @@ modules:
         - installsignedkernel.sh
         - chezmoi.sh
         - nordvpn.sh
+        - distrobox.sh
         - vscode.sh
         - icedrive.sh
         - filen.sh
