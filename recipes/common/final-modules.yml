@@ -1,6 +1,5 @@
 modules:
     - type: script
       scripts:
-        - cargo.sh
         - removeunusedrepos.sh
         - regenerateinitramfs.sh
