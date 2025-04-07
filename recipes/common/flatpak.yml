@@ -20,7 +20,6 @@ modules:
         - it.mijorus.gearlever
         - org.mozilla.Thunderbird
         - io.github.dvlv.boxbuddyrs
-        - app.zen_browser.zen
         - io.neovim.nvim
         - com.github.ahrm.sioyek
         - com.inform7.IDE
