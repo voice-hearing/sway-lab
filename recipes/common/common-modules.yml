@@ -211,7 +211,6 @@ modules:
 
     - type: script
       scripts:
-        - distrobox.sh
         - settheming.sh
         - addbrewjustimport.sh
         
