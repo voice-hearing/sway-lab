@@ -58,6 +58,7 @@ sudo eatmydata dnf -y dist-upgrade
 
 # development tools
 sudo dnf groupinstall -y "Development Tools"
-sudo dnf install -y git vim bash-completion wget gnupg python3 &&
-sudo dnf install wget bat exa fd-find fzf rust cargo hugo go fortune-mod zeitfetch python3-i3ipc ripgrep thefuck zoxide pandoc poppler-devel poppler-utils ImageMagick jq p7zip p7zip-plugins tree exiftool btop xfce4-appearance-settings lxappearance fish && wget https://mega.nz/linux/repo/Fedora_41/x86_64/megasync-Fedora_41.x86_64.rpm && sudo dnf install "$PWD/megasync-Fedora_41.x86_64.rpm" && 
+sudo dnf install -y git vim bash-completion wget gnupg python3
+sudo dnf install wget bat exa fd-find fzf rust cargo hugo go fortune-mod zeitfetch python3-i3ipc ripgrep thefuck zoxide pandoc poppler-devel poppler-utils ImageMagick jq p7zip p7zip-plugins tree exiftool btop xfce4-appearance-settings lxappearance fish && wget https://mega.nz/linux/repo/Fedora_41/x86_64/megasync-Fedora_41.x86_64.rpm 
+sudo dnf install "$PWD/megasync-Fedora_41.x86_64.rpm" && 
 sudo dnf install https://prerelease.keybase.io/keybase_amd64.rpm
