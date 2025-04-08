@@ -18,8 +18,8 @@ RELEASE=${1:-41}
 DISTRO=${2:-fedora}
 
 toolbox rm -f $RELEASE || true
-podman pull public.ecr.aws/$DISTRO/$DISTRO:$RELEASE
-toolbox -y create -c $RELEASE --image public.ecr.aws/$DISTRO/$DISTRO:$RELEASE
+podman pull ghcr.io/ublue-os/$DISTRO/$DISTRO:$RELEASE
+toolbox -y create -c $RELEASE --image ghcr.io/ublue-os/$DISTRO/$DISTRO:$RELEASE
 
 # can't do that with toolbox run yet, as we need to install sudo first
 podman start $RELEASE
