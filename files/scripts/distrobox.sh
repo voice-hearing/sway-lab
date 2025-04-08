@@ -5,42 +5,59 @@
 # builds actually ran successfully without any errors!
 set -oue pipefail
 
-# Fedora 41 Distrobox setup without Podman commands
-# Original concept: https://piware.de/gitweb/?p=bin.git;a=blob_plain;f=build-debian-toolbox
+#!/bin/sh
+# Adapted from https://piware.de/gitweb/?p=bin.git;a=blob_plain;f=build-debian-toolbox
+# Thanks Martin Pitt!
+
+set -eux
+
+# See https://gallery.ecr.aws/debian/debian for list of releases
+# 
 
 RELEASE=${1:-41}
 DISTRO=${2:-fedora}
 
-# Remove existing container
-distrobox rm -f $RELEASE || true
+toolbox rm -f $RELEASE || true
+podman pull public.ecr.aws/$DISTRO/$DISTRO:$RELEASE
+toolbox -y create -c $RELEASE --image public.ecr.aws/$DISTRO/$DISTRO:$RELEASE
 
-# Create container from Fedora image
-distrobox create -n $RELEASE --image registry.fedoraproject.org/$DISTRO:$RELEASE
+# can't do that with toolbox run yet, as we need to install sudo first
+podman start $RELEASE
+podman exec -it $RELEASE sh -exc 
 
-# Configure container environment
-distrobox enter --name $RELEASE -- sh -exc '
-# Update base system
-dnf -y update
+# allow sudo with empty password
+sed -i "s/nullok_secure/nullok/" /etc/pam.d/common-auth
 
-# Install core utilities
-dnf install -y sudo hostname util-linux dialog dnf-plugins-core
-
-# Configure passwordless sudo
-echo "%wheel ALL=(ALL) NOPASSWD: ALL" | tee /etc/sudoers.d/wheel-nopasswd
-chmod 440 /etc/sudoers.d/wheel-nopasswd
-
-# Set hostname
-hostnamectl set-hostname fedora-${RELEASE}
-
-# Install development tools
-dnf groupinstall -y "Development Tools"
-dnf install -y git vim bash-completion wget gnupg python3 &&
-dnf install wget bat exa fd-find fzf rust cargo hugo go fortune-mod zeitfetch python3-i3ipc ripgrep thefuck zoxide pandoc poppler-devel poppler-utils ImageMagick jq p7zip p7zip-plugins tree exiftool btop xfce4-appearance-settings lxappearance fish && wget https://mega.nz/linux/repo/Fedora_41/x86_64/megasync-Fedora_41.x86_64.rpm && sudo dnf install "$PWD/megasync-Fedora_41.x86_64.rpm" && sudo dnf install https://prerelease.keybase.io/keybase_amd64.rpm
-
-    
-
-# Clean package cache
-dnf clean all
 '
 
-distrobox enter --name $RELEASE
+# go-faster apt/dpkg
+echo force-unsafe-io > /etc/dpkg/dpkg.cfg.d/unsafe-io
+
+# location based redirector gets it wrong with company VPN; also add deb-src
+sed -i "s/deb.debian.org/cloudfront.debian.net/; /^deb\b/ { p; s/^deb/deb-src/ }" /etc/apt/sources.list
+
+apt-get update
+apt-get install -y libnss-myhostname sudo eatmydata libcap2-bin dialog ssh
+
+# allow sudo with empty password
+sed -i "s/nullok_secure/nullok/" /etc/pam.d/common-auth
+'
+
+toolbox run --container $RELEASE sh -exc 
+# otherwise installing systemd fails
+sudo umount /var/log/journal
+
+# useful hostname
+. /etc/os-release
+echo "${ID}-${VERSION_ID:-sid}" | sudo tee /etc/hostname
+sudo hostname -F /etc/hostname
+
+sudo dnf install eatmydata
+
+sudo eatmydata dnf -y dist-upgrade
+
+# development tools
+sudo dnf groupinstall -y "Development Tools"
+sudo dnf install -y git vim bash-completion wget gnupg python3 &&
+sudo dnf install wget bat exa fd-find fzf rust cargo hugo go fortune-mod zeitfetch python3-i3ipc ripgrep thefuck zoxide pandoc poppler-devel poppler-utils ImageMagick jq p7zip p7zip-plugins tree exiftool btop xfce4-appearance-settings lxappearance fish && wget https://mega.nz/linux/repo/Fedora_41/x86_64/megasync-Fedora_41.x86_64.rpm && sudo dnf install "$PWD/megasync-Fedora_41.x86_64.rpm" && 
+sudo dnf install https://prerelease.keybase.io/keybase_amd64.rpm
