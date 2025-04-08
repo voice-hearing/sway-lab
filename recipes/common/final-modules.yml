@@ -1,6 +1,5 @@
 modules:
     - type: script
       scripts:
-        - distrobox.sh
         - removeunusedrepos.sh
         - regenerateinitramfs.sh
