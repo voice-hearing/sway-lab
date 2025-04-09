@@ -4,7 +4,7 @@ See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup i
 
 This artful opinionated image is collection of parts for personal use. 
 
-![sway](https://github.com/voice-hearing/sway-lab/blob/main/2025-03-31T21%3A05%3A25%2C047822887%2B01%3A00.png)
+![sway](https://github.com/voice-hearing/sway-lab/blob/main/2025-04-09T19:41:58,668964284+01:00.png)
 ## Abstract
 Learned how to insert into custom image to make it more suitable for my use:
 * repository
