@@ -51,6 +51,8 @@ modules:
         - gcc
         - fortune-mod
         - zeitfetch
+        - tig
+        - w3m
         - python3-i3ipc
         - ripgrep
         - thefuck
