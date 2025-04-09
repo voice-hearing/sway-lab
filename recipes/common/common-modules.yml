@@ -223,5 +223,4 @@ modules:
     - type: script
       scripts:
         - cargo.sh
-        - distrobox.sh
         - starship.sh
