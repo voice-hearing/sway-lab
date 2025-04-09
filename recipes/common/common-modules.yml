@@ -74,6 +74,7 @@ modules:
         - headsetcontrol
         - mediainfo
         - polkit
+        - podman
         - xfce-polkit 
         - fprintd-pam
         - xdg-user-dirs
