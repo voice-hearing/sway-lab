@@ -216,4 +216,5 @@ modules:
         
     - type: script
       scripts:
-e        - starship.sh
+        - distrobox.sh
+        - starship.sh
