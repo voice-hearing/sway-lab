@@ -54,6 +54,9 @@ modules:
         - tig
         - w3m
         - python3-i3ipc
+        - python-pygments
+        - socat
+        - catimg
         - ripgrep
         - thefuck
         - zoxide
