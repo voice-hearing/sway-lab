@@ -53,6 +53,7 @@ modules:
         - zeitfetch
         - tig
         - w3m
+        - torsocks
         - python3-i3ipc
         - python-pygments
         - socat
