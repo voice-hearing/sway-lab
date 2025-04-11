@@ -199,11 +199,22 @@ modules:
         - libpostproc-free  
         - libswresample-free  
         - libswscale-free  
+        - firefox-langpacks
+        - firefox
 
     - type: script
       scripts:
         - installrpmfusion.sh
         - removeunusedrepos.sh
+
+    - type: appimages
+      install:
+        - name: filen
+          url: https://github.com/FilenCloudDienste/filen-desktop/releases/download/v3.0.47/Filen_linux_x86_64.AppImage
+          display: Filen cloud
+          categories: Internet;
+          description: Cloud sync
+          icon: filen.png
 
     - type: files
       files:
