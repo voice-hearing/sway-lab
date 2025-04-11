@@ -214,8 +214,7 @@ modules:
           display: Filen cloud
           categories: Internet;
           description: Cloud sync
-          icon: filen.png
-
+          
     - type: files
       files:
         - source: system/usr
