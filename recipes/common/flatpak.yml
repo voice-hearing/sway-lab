@@ -18,6 +18,9 @@ modules:
       install:    
         - com.github.tchx84.Flatseal
         - it.mijorus.gearlever
+        - io.github.flattool.Ignition
+        - org.gnome.Logs
+        - io.missioncenter.MissionCenter
         - org.mozilla.Thunderbird
         - io.github.dvlv.boxbuddyrs
         - io.neovim.nvim
