@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Lens
+Comment= Managing and troubleshooting kubernetes workloads
+Exec=k8slens %F
+Icon=/usr/share/k8slens/app.png
+Terminal=false
+Type=Application
+MimeType=text/plain;
+Categories=Application;
