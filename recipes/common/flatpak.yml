@@ -72,6 +72,7 @@ modules:
         - com.hunterwittenborn.Celeste
         - com.dec05eba.gpu_screen_recorder
         - org.kde.kdenlive
+        - io.github.getnf.embellish
         - com.brave.Browser
         - dev.zed.Zed
         - com.borgbase.Vorta
