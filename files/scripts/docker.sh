@@ -31,7 +31,8 @@ mkdir -p /usr/lib/sysctl.d
 echo "net.ipv4.ip_forward = 1" >/usr/lib/sysctl.d/docker-ce.conf
 
 # disable repo
-# sed -i "s@enabled=1@enabled=0@" /etc/yum.repos.d/docker-ce.repo
+sed -i "s@enabled=1@enabled=0@" /etc/yum.repos.d/docker-ce.repo
+
 #if [[ $FEDORA_MAJOR_VERSION -eq 42 ]]; then
 #    dnf install -y --enablerepo=docker-ce-testing docker-buildx-plugin docker-ce docker-ce-cli docker-compose-plugin
 #fi
