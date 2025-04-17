@@ -14,6 +14,8 @@ echo "Running script as user: ${USER}"
 
 mkdir -p /var/home/$USER/AppImages
 
-wget "https://github.com/voice-hearing/sway-lab/blob/main/files/system/pcloud/pcloud.AppImage" -O /var/home/$USER/AppImages/pcloud.AppImage
+wget --quiet --output-document /var/home/$USER/AppImages \
+
+"https://github.com/voice-hearing/sway-lab/blob/main/files/system/pcloud/pcloud.AppImage"
 
 chmod +x /var/home/$USER/AppImages/pcloud.AppImage
