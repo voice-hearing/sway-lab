@@ -1,0 +1,14 @@
+[Desktop Entry]
+Name=Filen
+Exec=/home/fedora/AppImages/filen.appimage --no-sandbox %U
+TryExec=/home/fedora/AppImages/filen.appimage
+Icon=/home/fedora/AppImages/.icons/filen.png
+Terminal=false
+Type=Application
+
+StartupWMClass=Filen
+X-AppImage-Version=3.0.47
+Comment=Filen Desktop Client
+Categories=Utility;
+
+X-AppImage-Version=3.0.47
