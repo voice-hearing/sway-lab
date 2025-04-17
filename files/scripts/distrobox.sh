@@ -7,44 +7,45 @@ set -eux
 
 
 # See https://gallery.ecr.aws/ubuntu/ubuntu for list of releases
-# 
+FROM registry.fedoraproject.org/fedora-toolbox:41 AS fedora-toolbox
 
-RELEASE=${1:-jammy-22.04_edge}
-DISTRO=${2:-ubuntu}
+LABEL com.github.containers.toolbox="true" \
+      usage="This image is meant to be used with the toolbox or distrobox command" \
+      summary="A cloud-native terminal experience powered by Fedora" 
 
-toolbox rm -f $RELEASE || true
-podman pull public.ecr.aws/$DISTRO/$DISTRO:$RELEASE
-toolbox -y create -c $RELEASE --image public.ecr.aws/$DISTRO/$DISTRO:$RELEASE
+COPY ./toolboxes/fedora-toolbox/packages.fedora /tmp/toolbox-packages
 
-# can't do that with toolbox run yet, as we need to install sudo first
-podman start $RELEASE
-podman exec -it $RELEASE sh -exc '
-# go-faster apt/dpkg
-echo force-unsafe-io > /etc/dpkg/dpkg.cfg.d/unsafe-io
+RUN dnf -y upgrade && \
+    dnf -y install $(<tmp/toolbox-packages) && \
+    dnf clean all
 
-apt-get update
-apt-get install -y libnss-myhostname sudo eatmydata libcap2-bin dialog
+# Set up dependencies
+RUN git clone https://github.com/89luca89/distrobox.git --single-branch /tmp/distrobox && \
+    cp /tmp/distrobox/distrobox-host-exec /usr/bin/distrobox-host-exec && \
+    wget https://github.com/1player/host-spawn/releases/download/$(cat /tmp/distrobox/distrobox-host-exec | grep host_spawn_version= | cut -d "\"" -f 2)/host-spawn-$(uname -m) -O /usr/bin/host-spawn && \
+    chmod +x /usr/bin/host-spawn && \
+    rm -drf /tmp/distrobox && \
+    dnf install -y 'dnf-command(copr)' && \
+    dnf clean all
 
-# allow sudo with empty password
-sed -i "s/nullok_secure/nullok/" /etc/pam.d/common-auth
-'
+# Set up cleaner Distrobox integration
+RUN dnf copr enable -y kylegospo/distrobox-utils && \
+    dnf install -y \
+    xdg-utils-distrobox \
+    adw-gtk3-theme && \
+    ln -s /usr/bin/distrobox-host-exec /usr/bin/flatpak && \
+    dnf clean all
 
-toolbox run --container $RELEASE sh -exc '
-# otherwise installing systemd fails
-sudo umount /var/log/journal
+# Install RPMFusion for hardware accelerated encoding/decoding
+RUN dnf install -y \
+    "https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm" \
+    "https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm" && \
+    dnf install -y \
+    intel-media-driver \
+    nvidia-vaapi-driver && \
+    dnf swap -y mesa-va-drivers mesa-va-drivers-freeworld && \
+    dnf swap -y mesa-vdpau-drivers mesa-vdpau-drivers-freeworld && \
+    dnf clean all
 
-# useful hostname
-. /etc/os-release
-echo "${ID}-${VERSION_ID:-sid}" | sudo tee /etc/hostname
-sudo hostname -F /etc/hostname
-
-sudo eatmydata apt-get -y dist-upgrade
-
-# development tools
-sudo eatmydata apt-get install -y --no-install-recommends build-essential git-buildpackage libwww-perl less vim lintian debhelper manpages-dev git dput pristine-tar bash-completion wget gnupg ubuntu-dev-tools python3-debian fakeroot libdistro-info-perl dialog
-
-# autopkgtest
-sudo eatmydata apt-get install -y --no-install-recommends autopkgtest qemu-system-x86 qemu-utils genisoimage bat exa fd-find fzf rust cargo hugo go fortune-mod zeitfetch python3-i3ipc ripgrep thefuck zoxide pandoc poppler-devel poppler-utils ImageMagick jq p7zip p7zip-plugins tree exiftool btop xfce4-appearance-settings lxappearance fish
-'
-
-toolbox enter --container $RELEASE
+# Cleanup
+RUN rm -rf /tmp/*
