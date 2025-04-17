@@ -50,7 +50,7 @@ modules:
         - go
         - gcc
         - fortune-mod
-        - zeitfetch
+        - fastfetch
         - tig
         - w3m
         - torsocks
