@@ -61,7 +61,7 @@ modules:
         - ripgrep
         - thefuck
         - zoxide
-        - zsh
+        - gh
         - pandoc
         - poppler-devel
         - poppler-utils
