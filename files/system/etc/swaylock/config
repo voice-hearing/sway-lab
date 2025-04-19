@@ -1,8 +1,7 @@
 # The defaults below could be overridden in $XDG_CONFIG_HOME/swaylock/config
-# ~/.config/swaylock/config
+#  (~/.config/swaylock/config).
 #
 # Image path supports environment variables and shell expansions,
-image=/home/fedora/Pictures/wallpapers/Nebula.jpg
+# e.g. image=$HOME/Pictures/default.jxl
+image=/usr/share/backgrounds/default.jxl
 scaling=fill
-#image=/usr/share/backgrounds/default.png
-#scaling=fill
