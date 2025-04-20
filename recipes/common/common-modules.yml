@@ -72,7 +72,6 @@ modules:
       - python3-pip
       - make
       - nodejs
-      - rclone
       - dnf-plugins-core
       - fortune-mod
       - fastfetch
