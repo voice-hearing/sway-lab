@@ -55,6 +55,7 @@ modules:
       - vulkan-validation-layers
       - vulkan-tools
       - google-noto-emoji-fonts
+      - rsms-inter-fonts
       - gnome-disk-utility
       - ddcutil
       - openssl
@@ -70,12 +71,15 @@ modules:
       - poppler-utils
       - python3
       - python3-pip
+      - python-i3ipc
       - make
       - nodejs
       - dnf-plugins-core
       - fortune-mod
       - fastfetch
       - ptyxis
+      - gcc
+      - gammastep
 
       # sound
       - wireplumber
