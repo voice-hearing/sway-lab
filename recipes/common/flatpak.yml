@@ -37,10 +37,12 @@ modules:
         - org.kde.dolphin
         - io.gitlab.adhami3310.Converter
         - com.github.Murmele.Gittyup
+        - org.gnome.World.PikaBackup
         - io.github.shiftey.Desktop
         - com.neatdecisions.Detwinner
         - com.zettlr.Zettlr
         - io.github.sxyazi.yazi
+        - org.bleachbit.BleachBit
         - eu.betterbird.Betterbird
         - com.uploadedlobster.peek
         - org.onlyoffice.desktopeditors
@@ -73,6 +75,9 @@ modules:
         - com.dec05eba.gpu_screen_recorder
         - org.kde.kdenlive
         - io.github.getnf.embellish
+        - com.github.jeromerobert.pdfarranger 
+        - com.github.qarmin.czkawka 
+        - com.github.rafostar.Clapper
         - com.brave.Browser
         - dev.zed.Zed
         - com.borgbase.Vorta
