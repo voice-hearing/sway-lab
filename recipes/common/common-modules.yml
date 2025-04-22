@@ -75,6 +75,7 @@ modules:
       - dnf-plugins-core
       - fortune-mod
       - fastfetch
+      - ptyxis
 
       # sound
       - wireplumber
